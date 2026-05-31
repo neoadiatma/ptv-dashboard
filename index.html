@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Victoria's PTV: A Visual Story</title>
+  <!-- Pure.css for simple grid/layout -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@3.0.0/build/pure-min.css">
+  <!-- Vega libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.25.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.15.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.24.0"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      max-width: 1800px; /* Slightly wider to accommodate charts comfortably */
+      margin: 0 auto;
+      padding: 0;
+      color: #2c3e50;
+      line-height: 1.6;
+      background: #f4f7f9; /* Softer, cooler background */
+    }
+    
+    /* PTV Theme Header */
+    header {
+      background-color: #012A5E; /* PTV Navy */
+      color: white;
+      text-align: center;
+      padding: 3em 1.5em;
+      margin-bottom: 3em;
+      border-bottom: 6px solid #00AEEF; /* PTV Train Cyan */
+    }
+    header h1 {
+      font-size: 2.8rem;
+      margin: 0;
+      color: #ffffff;
+      letter-spacing: 1px;
+    }
+    .subtitle {
+      font-size: 1.2rem;
+      color: #b3d4f0;
+      margin-top: 0.5em;
+      font-weight: 300;
+    }
+
+    /* Typography & Sections */
+    section, .content-wrapper {
+      padding: 0 2em;
+    }
+    h2 {
+      font-size: 1.8rem;
+      margin: 2em 0 1em 0;
+      padding-bottom: 0.3em;
+      border-bottom: 3px solid #e0e6ed;
+      color: #012A5E;
+    }
+    h3 {
+      font-size: 1.2rem;
+      color: #00AEEF;
+      margin-top: 0;
+      margin-bottom: 0.5em;
+    }
+    p {
+      margin-bottom: 1.5em;
+    }
+    a {
+      color: #00AEEF;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Layout & Charts */
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.5em; /* Increased gap to prevent overlaps */
+      margin-bottom: 2.5em; /* Increased vertical spacing */
+    }
+    .col {
+      flex: 1;
+      min-width: 500px; /* Increased min-width for larger Vega charts */
+      display: flex;
+      flex-direction: column;
+    }
+    .chart-container {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(1, 42, 94, 0.08); 
+      padding: 1.5em;
+      overflow-x: auto; 
+      position: relative;
+      flex-grow: 1; 
+      border-top: 4px solid #012A5E;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .annotation {
+      font-size: 0.95rem;
+      color: #5c6c7c;
+      margin: 0 0 1em 0;
+      font-style: italic;
+    }
+
+    /* Interactive Elements */
+    .map-controls {
+      text-align: center;
+      margin-top: 1em;
+      margin-bottom: 2em;
+    }
+    button {
+      background: #00AEEF;
+      color: white;
+      border: none;
+      padding: 0.6em 1.8em;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    button:hover {
+      background: #012A5E;
+      transform: translateY(-1px);
+    }
+    
+    /* Cursor styles for the map container */
+    #chart01 {
+      cursor: grab;
+      border-top: 4px solid #00AEEF; /* Highlight the main map */
+    }
+    #chart01:active {
+      cursor: grabbing;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 4em;
+      background: #e9eef3;
+      padding: 2em;
+      font-size: 0.9em;
+      color: #4a5c6e;
+      text-align: center;
+      border-top: 2px solid #d1dbe5;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🚃 Victoria's Public Transport Story</h1>
+    <p class="subtitle">Who rides, when, and where - a data-driven tour of Melbourne's train network</p>
+  </header>
+
+  <div class="content-wrapper">
+    <!-- ========== Section 1: The Network ========== -->
+    <section>
+      <h2>1. The Network at a Glance</h2>
+      <p>Melbourne's metropolitan train system connects over 200 stations. Each circle represents a station, sized by annual entries. Use the dropdown to explore individual lines.</p>
+      <div class="chart-container" id="chart01"></div>
+      <div class="map-controls">
+        <button onclick="resetMapZoom()">🔍 Reset Zoom</button>
+        <br><br>
+        <span class="annotation">(You can also scroll to zoom and drag to pan)</span>
+      </div>
+    </section>
+
+    <!-- ========== Section 2: Ridership ========== -->
+    <section>
+      <h2>2. Where Do Passengers Board?</h2>
+      <div class="row">
+        <div class="col">
+          <h3>Total Entries by Line</h3>
+          <div class="chart-container" id="chart02"></div>
+        </div>
+        <div class="col">
+          <h3>Top 10 Busiest Stations</h3>
+          <div class="chart-container" id="chart04"></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <h3>AM vs PM Peak Boardings</h3>
+          <p class="annotation">Every dot is a station. Notice how some are strongly AM-oriented while others dominate in the afternoon.</p>
+          <div class="chart-container" id="chart03"></div>
+        </div>
+        <div class="col">
+          <h3>High-Traffic Stations Map</h3>
+          <p class="annotation">Only stations with >500,000 annual entries.</p>
+          <div class="chart-container" id="chart05"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Section 3: Time Patterns ========== -->
+    <section>
+      <h2>3. When Do People Travel?</h2>
+      <div class="row">
+        <div class="col">
+          <h3>Peak Composition of Top 10 Stations</h3>
+          <p class="annotation">How the busiest stations split their boardings across AM, inter-peak, PM, and late evening.</p>
+          <div class="chart-container" id="chart06"></div>
+        </div>
+        <div class="col">
+          <h3>Distribution of Station Entries</h3>
+          <p class="annotation">Most stations handle fewer than 1 million entries per year; a handful exceed 5 million.</p>
+          <div class="chart-container" id="chart07"></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col" style="min-width: 100%;">
+          <h3>Service Frequency by Hour and Line</h3>
+          <p class="annotation">Number of times the stations in a line are serviced for each hour (weekday). Click a line in the legend to highlight it.</p>
+          <div class="chart-container" id="chart08"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Section 4: Geography & Change ========== -->
+    <section>
+      <h2>4. Geography and Recent Changes</h2>
+      <div class="row">
+        <div class="col">
+          <h3>Patronage by Region</h3>
+          <p class="annotation">CBD, inner, and outer stations grouped.</p>
+          <div class="chart-container" id="chart09"></div>
+        </div>
+        <div class="col">
+          <h3>Weekday vs Weekend Travel</h3>
+          <p class="annotation">How the busiest 20 stations serve weekday, Saturday, and Sunday passengers.</p>
+          <div class="chart-container" id="chart10"></div>
+        </div>
+      </div> <!-- MISSING DIV FIXED HERE -->
+    </section>
+
+    <!-- ========== Section 5: Operations ========== -->
+    <section>
+      <h2>5. Does More Service Mean More Riders?</h2>
+      <p>Each point is a station. The horizontal axis shows weekday services (trips stopping at that station). The vertical axis uses a log scale because entries vary hugely.</p>
+      <div class="chart-container" id="chart11"></div>
+    </section>
+  </div> <!-- End Content Wrapper -->
+
+  <footer>
+    <p>
+      Data sources: <a href="https://opendata.transport.vic.gov.au" target="_blank">Victorian Government Open Data</a> - 
+      GTFS schedule & annual metropolitan train station patronage.<br>
+      Background map: ABS Greater Capital City Statistical Area (simplified). | Author: Neo Adiatma | Date: 2026-05-31
+    </p>
+  </footer>
+
+  <script>
+  const chartSpecs = [
+    'charts/01_map.json',
+    'charts/02_line_entries.json',
+    'charts/03_am_pm.json',
+    'charts/04_top10_bar.json',
+    'charts/05_bubble_map.json',
+    'charts/06_top10_peak.json',
+    'charts/07_histogram.json',
+    'charts/08_hourly_freq.json',
+    'charts/09_region_stacked.json',
+    'charts/10_weekday_weekend.json',
+    'charts/11_services_scatter.json'
+  ];
+
+  const divIds = [
+    'chart01', 'chart02', 'chart03', 'chart04', 'chart05',
+    'chart06', 'chart07', 'chart08', 'chart09', 'chart10', 'chart11'
+  ];
+
+  let mapView = null;
+  let isPanning = false, lastX = 0, lastY = 0;
+
+  chartSpecs.forEach((specUrl, i) => {
+    vegaEmbed(`#${divIds[i]}`, specUrl, { actions: false })
+      .then(res => {
+        if (i === 0) {
+          mapView = res.view;
+          attachZoomPan(mapView);
+        }
+      })
+      .catch(err => console.error(`Error loading ${specUrl}:`, err));
+  });
+
+  function attachZoomPan(view) {
+    const container = document.getElementById('chart01');
+
+    // Zoom with mouse wheel
+    container.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      const currentScale = view.signal('zoomScale');
+      const delta = -e.deltaY * 0.1;
+      const factor = 1 + delta * 0.005;
+      // Keep scaling within reasonable limits for Melbourne
+      const newScale = Math.max(10000, Math.min(250000, currentScale * factor));
+      view.signal('zoomScale', newScale).runAsync();
+    }, { passive: false });
+
+    // Pan with mouse drag
+    container.addEventListener('mousedown', (e) => {
+      // Don't hijack the click if the user is clicking the dropdown/controls
+      if (e.target.closest('.vega-bindings')) {
+        return; 
+      }
+
+      isPanning = true;
+      lastX = e.clientX;
+      lastY = e.clientY;
+      container.style.cursor = 'grabbing';
+      e.preventDefault(); // Now this only fires on the map itself
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      if (!isPanning) return;
+      const dx = e.clientX - lastX;
+      const dy = e.clientY - lastY;
+      lastX = e.clientX;
+      lastY = e.clientY;
+
+      const panX = view.signal('panX');
+      const panY = view.signal('panY');
+      view.signal('panX', panX + dx);
+      view.signal('panY', panY + dy);
+      view.runAsync();
+    });
+
+    window.addEventListener('mouseup', () => {
+      if (isPanning) {
+        isPanning = false;
+        container.style.cursor = 'grab';
+      }
+    });
+  }
+
+  function resetMapZoom() {
+    if (mapView) {
+      // Revert to the hardcoded JSON defaults
+      mapView.signal('zoomScale', 50000);
+      mapView.signal('panX', 350);
+      mapView.signal('panY', 275);
+      mapView.runAsync();
+    } else {
+      alert('Map is still loading. Please try again in a moment.');
+    }
+  }
+</script>
+
+</body>
+</html>
