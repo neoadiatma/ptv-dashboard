@@ -1,0 +1,20 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "data/weekday_weekend.csv"},
+  "width": 450,
+  "height": 400,
+  "mark": {"type": "bar"},
+  "encoding": {
+    "x": {"field": "Passengers", "type": "quantitative", "title": "Passengers"},
+    "y": {"field": "stop_name", "type": "nominal", "sort": "-x", "title": null},
+    "color": {
+      "field": "DayType", "type": "nominal",
+      "scale": {"domain": ["weekday", "Saturday", "Sunday"], "range": ["#1f77b4", "#ff7f0e", "#2ca02c"]}
+    },
+    "tooltip": [
+      {"field": "stop_name", "title": "Station"},
+      {"field": "DayType"},
+      {"field": "Passengers", "format": ",.0f"}
+    ]
+  }
+}

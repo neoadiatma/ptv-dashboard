@@ -1,0 +1,61 @@
+stop_name,DayType,Passengers
+Box Hill Railway Station,weekday,8350
+Caulfield Railway Station,weekday,9600
+Craigieburn Railway Station,weekday,4800
+Clayton Railway Station,weekday,4750
+Dandenong Railway Station,weekday,6300
+Flagstaff Railway Station,weekday,12350
+Flinders Street Railway Station,weekday,60900
+Footscray Railway Station,weekday,14000
+Glenferrie Railway Station,weekday,6800
+Huntingdale Railway Station,weekday,5650
+Melbourne Central Railway Station,weekday,38300
+North Melbourne Railway Station,weekday,3950
+Oakleigh Railway Station,weekday,5150
+Parliament Railway Station,weekday,22350
+Richmond Railway Station,weekday,9850
+Ringwood Railway Station,weekday,4650
+Springvale Railway Station,weekday,4300
+Southern Cross Railway Station,weekday,47600
+Sunshine Railway Station,weekday,5100
+South Yarra Railway Station,weekday,10350
+Box Hill Railway Station,Saturday,5350
+Caulfield Railway Station,Saturday,8250
+Craigieburn Railway Station,Saturday,2900
+Clayton Railway Station,Saturday,3050
+Dandenong Railway Station,Saturday,3750
+Flagstaff Railway Station,Saturday,2900
+Flinders Street Railway Station,Saturday,43150
+Footscray Railway Station,Saturday,8850
+Glenferrie Railway Station,Saturday,2500
+Huntingdale Railway Station,Saturday,1500
+Melbourne Central Railway Station,Saturday,20650
+North Melbourne Railway Station,Saturday,4100
+Oakleigh Railway Station,Saturday,3150
+Parliament Railway Station,Saturday,6450
+Richmond Railway Station,Saturday,13000
+Ringwood Railway Station,Saturday,3350
+Springvale Railway Station,Saturday,3300
+Southern Cross Railway Station,Saturday,26500
+Sunshine Railway Station,Saturday,2800
+South Yarra Railway Station,Saturday,5900
+Box Hill Railway Station,Sunday,4100
+Caulfield Railway Station,Sunday,5600
+Craigieburn Railway Station,Sunday,2150
+Clayton Railway Station,Sunday,2350
+Dandenong Railway Station,Sunday,2800
+Flagstaff Railway Station,Sunday,2200
+Flinders Street Railway Station,Sunday,31350
+Footscray Railway Station,Sunday,5800
+Glenferrie Railway Station,Sunday,1900
+Huntingdale Railway Station,Sunday,1050
+Melbourne Central Railway Station,Sunday,17250
+North Melbourne Railway Station,Sunday,3050
+Oakleigh Railway Station,Sunday,2250
+Parliament Railway Station,Sunday,4750
+Richmond Railway Station,Sunday,8850
+Ringwood Railway Station,Sunday,2450
+Springvale Railway Station,Sunday,2650
+Southern Cross Railway Station,Sunday,19550
+Sunshine Railway Station,Sunday,2050
+South Yarra Railway Station,Sunday,4100

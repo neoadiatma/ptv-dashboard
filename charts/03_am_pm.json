@@ -1,0 +1,16 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "data/am_pm_scatter.csv"},
+  "width": 400,
+  "height": 350,
+  "mark": {"type": "circle", "color": "#e31a1c", "opacity": 0.7},
+  "encoding": {
+    "x": {"field": "AM_peak", "type": "quantitative", "title": "AM peak boardings"},
+    "y": {"field": "PM_peak", "type": "quantitative", "title": "PM peak boardings"},
+    "tooltip": [
+      {"field": "Stop_name_clean", "title": "Station"},
+      {"field": "AM_peak", "format": ",.0f"},
+      {"field": "PM_peak", "format": ",.0f"}
+    ]
+  }
+}

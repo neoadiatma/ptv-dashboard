@@ -1,0 +1,16 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "data/stations.json"},
+  "width": 400,
+  "height": 300,
+  "mark": {"type": "bar", "color": "#7f7f7f"},
+  "encoding": {
+    "x": {
+      "field": "entries",
+      "type": "quantitative",
+      "bin": {"maxbins": 30},
+      "title": "Annual entries (binned)"
+    },
+    "y": {"aggregate": "count", "type": "quantitative", "title": "Number of stations"}
+  }
+}

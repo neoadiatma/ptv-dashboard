@@ -1,0 +1,41 @@
+stop_name,Peak,Passengers
+Box Hill Railway Station,AM_peak,2600
+Caulfield Railway Station,AM_peak,2350
+Flagstaff Railway Station,AM_peak,850
+Flinders Street Railway Station,AM_peak,3600
+Footscray Railway Station,AM_peak,3850
+Melbourne Central Railway Station,AM_peak,1650
+Parliament Railway Station,AM_peak,850
+Richmond Railway Station,AM_peak,900
+Southern Cross Railway Station,AM_peak,3100
+South Yarra Railway Station,AM_peak,2600
+Box Hill Railway Station,interpeak,2400
+Caulfield Railway Station,interpeak,2500
+Flagstaff Railway Station,interpeak,2550
+Flinders Street Railway Station,interpeak,12600
+Footscray Railway Station,interpeak,4050
+Melbourne Central Railway Station,interpeak,9500
+Parliament Railway Station,interpeak,3950
+Richmond Railway Station,interpeak,1350
+Southern Cross Railway Station,interpeak,9300
+South Yarra Railway Station,interpeak,2500
+Box Hill Railway Station,PM_peak,2750
+Caulfield Railway Station,PM_peak,3600
+Flagstaff Railway Station,PM_peak,8450
+Flinders Street Railway Station,PM_peak,33650
+Footscray Railway Station,PM_peak,4750
+Melbourne Central Railway Station,PM_peak,21750
+Parliament Railway Station,PM_peak,16000
+Richmond Railway Station,PM_peak,4400
+Southern Cross Railway Station,PM_peak,30800
+South Yarra Railway Station,PM_peak,4600
+Box Hill Railway Station,PM_late,500
+Caulfield Railway Station,PM_late,1200
+Flagstaff Railway Station,PM_late,1150
+Flinders Street Railway Station,PM_late,10900
+Footscray Railway Station,PM_late,1000
+Melbourne Central Railway Station,PM_late,6550
+Parliament Railway Station,PM_late,2600
+Richmond Railway Station,PM_late,2800
+Southern Cross Railway Station,PM_late,5500
+South Yarra Railway Station,PM_late,950

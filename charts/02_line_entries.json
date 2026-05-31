@@ -1,0 +1,15 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "data/line_entries.csv"},
+  "width": 400,
+  "height": 350,
+  "mark": {"type": "bar", "color": "#2b8cbe"},
+  "encoding": {
+    "y": {"field": "Line", "type": "nominal", "sort": "-x", "title": null},
+    "x": {"field": "TotalEntries", "type": "quantitative", "title": "Total annual entries"},
+    "tooltip": [
+      {"field": "Line"},
+      {"field": "TotalEntries", "format": ",.0f"}
+    ]
+  }
+}

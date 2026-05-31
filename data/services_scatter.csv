@@ -1,0 +1,228 @@
+stop_name,entries,services_per_day
+Aircraft Railway Station,248850.0,1091.0
+Albion Railway Station,413900.0,2878.0
+Alamein Railway Station,96200.0,1537.0
+Alphington Railway Station,249100.0,1694.0
+Altona Railway Station,263300.0,992.0
+Armadale Railway Station,469600.0,2681.0
+Arden Railway Station,0.0,3431.0
+Ashburton Railway Station,201950.0,1537.0
+Aspendale Railway Station,169500.0,2633.0
+Ascot Vale Railway Station,491400.0,1774.0
+Anstey Railway Station,365100.0,1470.0
+Auburn Railway Station,650000.0,2287.0
+Anzac Railway Station,0.0,3441.0
+Batman Railway Station,228750.0,1486.0
+Bayswater Railway Station,446150.0,1458.0
+Brighton Beach Railway Station,332650.0,1957.0
+Blackburn Railway Station,1206950.0,2892.0
+Balaclava Railway Station,752350.0,1975.0
+Belgrave Railway Station,283100.0,1434.0
+Bell Railway Station,412250.0,1787.0
+Bentleigh Railway Station,586000.0,2675.0
+Berwick Railway Station,1008200.0,1797.0
+Beaconsfield Railway Station,199950.0,1797.0
+Bittern Railway Station,8800.0,0.0
+Burnley Railway Station,881250.0,3642.0
+Broadmeadows Railway Station,878300.0,1781.0
+Bonbeach Railway Station,141600.0,2633.0
+Boronia Railway Station,462850.0,1458.0
+Box Hill Railway Station,2648350.0,2892.0
+Burwood Railway Station,221250.0,1537.0
+Brunswick Railway Station,350600.0,1470.0
+Baxter Railway Station,2500.0,0.0
+Camberwell Railway Station,1260400.0,4302.0
+Carrum Railway Station,343700.0,2633.0
+Cranbourne Railway Station,1054250.0,1790.0
+Canterbury Railway Station,268450.0,2129.0
+Cardinia Road Railway Station,405950.0,1797.0
+Croydon Railway Station,447350.0,1445.0
+Caulfield Railway Station,3205100.0,6541.0
+Craigieburn Railway Station,1508250.0,1756.0
+Clifton Hill Railway Station,719300.0,3637.0
+Chatham Railway Station,183300.0,2129.0
+Clayton Railway Station,1514000.0,3674.0
+Coolaroo Railway Station,281400.0,1755.0
+Carnegie Railway Station,1015400.0,3674.0
+Coburg Railway Station,511300.0,1486.0
+Crib Point Railway Station,7900.0,0.0
+Chelsea Railway Station,352250.0,2633.0
+Cheltenham Railway Station,717500.0,2787.0
+Collingwood Railway Station,487500.0,3442.0
+Croxton Railway Station,244250.0,1787.0
+Darebin Railway Station,112450.0,1694.0
+Diamond Creek Railway Station,114700.0,921.0
+Dennis Railway Station,260800.0,1694.0
+Darling Railway Station,262650.0,1363.0
+Dandenong Railway Station,1970750.0,3696.0
+Diggers Rest Railway Station,165600.0,1820.0
+Eaglemont Railway Station,126500.0,1694.0
+East Camberwell Railway Station,185950.0,2129.0
+Edithvale Railway Station,201450.0,2633.0
+Elsternwick Railway Station,763550.0,1975.0
+Eltham Railway Station,344100.0,1561.0
+East Malvern Railway Station,333800.0,1363.0
+East Pakenham Railway Station ,54500.0,1797.0
+Epping Railway Station,748150.0,1811.0
+East Richmond Railway Station,575900.0,1894.0
+Essendon Railway Station,1347950.0,1781.0
+Fawkner Railway Station,146600.0,1470.0
+Flemington Bridge Railway Station,273600.0,1470.0
+Fairfield Railway Station,437700.0,1694.0
+Flagstaff Railway Station,3445200.0,6748.0
+Frankston Railway Station,1035450.0,2550.0
+Flinders Street Railway Station,19633300.0,19603.0
+Footscray Railway Station,4383950.0,6886.0
+Ferntree Gully Railway Station,337700.0,1452.0
+Gardiner Railway Station,399400.0,1348.0
+Glenbervie Railway Station,272200.0,1780.0
+Glenferrie Railway Station,1978650.0,2911.0
+Glen Huntly Railway Station ,0.0,2675.0
+Ginifer Railway Station,624500.0,2878.0
+Glen Iris Railway Station,261300.0,1348.0
+Gowrie Railway Station,232350.0,1470.0
+Greensborough Railway Station,378250.0,1719.0
+Glenroy Railway Station,740900.0,1780.0
+Gardenvale Railway Station,380050.0,1969.0
+Glen Waverley Railway Station,1209700.0,1363.0
+Hampton Railway Station,482700.0,1957.0
+Hawthorn Railway Station,531400.0,2287.0
+Hurstbridge Railway Station,75700.0,921.0
+Hoppers Crossing Railway Station,925850.0,1091.0
+Heidelberg Railway Station,822300.0,1796.0
+Heyington Railway Station,189500.0,1348.0
+Highett Railway Station,410950.0,2619.0
+Hawksburn Railway Station,447000.0,2681.0
+Hallam Railway Station,521500.0,1797.0
+Heathmont Railway Station,199600.0,1452.0
+Holmesglen Railway Station,383100.0,1363.0
+Hastings Railway Station,10850.0,0.0
+Heatherdale Railway Station,448700.0,2466.0
+Hughesdale Railway Station,555350.0,3674.0
+Huntingdale Railway Station,1590050.0,3674.0
+Hartwell Railway Station,138050.0,1537.0
+Hawkstowe Railway Station,208500.0,1790.0
+Ivanhoe Railway Station,617600.0,1796.0
+Jacana Railway Station,213150.0,1780.0
+Jolimont-MCG Railway Station,0.0,3604.0
+Jordanville Railway Station,388950.0,1363.0
+Jewell Railway Station,395350.0,1470.0
+Kananook Railway Station,173050.0,2550.0
+Kensington Railway Station,421500.0,1774.0
+Keon Park Railway Station,293800.0,1793.0
+Keilor Plains Railway Station,599750.0,2878.0
+Kooyong Railway Station,233000.0,1348.0
+Laburnum Railway Station,316900.0,2616.0
+Lalor Railway Station,494550.0,1793.0
+Laverton Railway Station,892250.0,1355.0
+Lynbrook Railway Station,407450.0,1790.0
+Lilydale Railway Station,512300.0,1409.0
+Leawarra Railway Station,5500.0,0.0
+Macaulay Railway Station,303550.0,1470.0
+Malvern Railway Station,703650.0,6400.0
+Middle Brighton Railway Station,512250.0,1969.0
+Macleod Railway Station,314850.0,1802.0
+Melbourne Central Railway Station,11876900.0,6748.0
+Mitcham Railway Station,925550.0,2484.0
+McKinnon Railway Station,369950.0,2675.0
+Mernda Railway Station,662700.0,1796.0
+Mentone Railway Station,583650.0,2633.0
+Merri Railway Station,147850.0,1787.0
+Middle Footscray Railway Station,190800.0,3459.0
+Moreland Railway Station,273050.0,1470.0
+Mooroolbark Railway Station,569250.0,1445.0
+Middle Gorge Railway Station,222950.0,1790.0
+Montmorency Railway Station,175700.0,1561.0
+Mordialloc Railway Station,529850.0,2639.0
+Moonee Ponds Railway Station,782550.0,1774.0
+Merinda Park Railway Station,577750.0,1790.0
+Murrumbeena Railway Station,712400.0,3674.0
+Moorabbin Railway Station,520000.0,2675.0
+Morradoo Railway Station,3400.0,0.0
+Mount Waverley Railway Station,658250.0,1363.0
+Merlynston Railway Station,284100.0,1470.0
+North Brighton Railway Station,502000.0,1969.0
+Northcote Railway Station,293050.0,1787.0
+Newmarket Railway Station,600650.0,1774.0
+North Melbourne Railway Station,1394050.0,6632.0
+Noble Park Railway Station,993800.0,3575.0
+Newport Railway Station,1245950.0,4009.0
+North Richmond Railway Station,608300.0,3442.0
+Narre Warren Railway Station,522200.0,1797.0
+Nunawading Railway Station,758050.0,2466.0
+North Williamstown Railway Station,271600.0,1730.0
+Oakleigh Railway Station,1624200.0,3674.0
+Officer Railway Station,208600.0,1797.0
+Oak Park Railway Station,418000.0,1780.0
+Ormond Railway Station,539450.0,2675.0
+Parliament Railway Station,6344650.0,6748.0
+Patterson Railway Station,287550.0,2675.0
+Parkdale Railway Station,268050.0,2633.0
+Pakenham Railway Station,495750.0,1797.0
+Parkville Railway Station,0.0,3433.0
+Prahran Railway Station,879500.0,1975.0
+Preston Railway Station,581250.0,1841.0
+Pascoe Vale Railway Station,538950.0,1780.0
+Flemington Racecourse Railway Station,145550.0,0.0
+Regent Railway Station,382700.0,1787.0
+Reservoir Railway Station,757800.0,1841.0
+Ripponlea Railway Station,465900.0,1975.0
+Riversdale Railway Station,144000.0,1549.0
+Richmond Railway Station,3712750.0,9518.0
+Rosanna Railway Station,432900.0,1796.0
+Royal Park Railway Station,291800.0,1486.0
+Rushall Railway Station,123150.0,1787.0
+Ruthven Railway Station,289350.0,1793.0
+Ringwood Railway Station,1514250.0,3084.0
+Ringwood East Railway Station,268800.0,1445.0
+Roxburgh Park Railway Station,498650.0,1755.0
+St Albans Railway Station (St Albans),0.0,2878.0
+Seaford Railway Station,320500.0,2550.0
+Seddon Railway Station,416600.0,2565.0
+Showgrounds Railway Station,114900.0,0.0
+Seaholme Railway Station,93100.0,992.0
+Sandringham Railway Station,710850.0,1963.0
+South Kensington Railway Station,324400.0,2565.0
+Strathmore Railway Station,303300.0,1780.0
+South Morang Railway Station,569650.0,1796.0
+Sandown Park Railway Station,458700.0,3575.0
+Southland Railway Station,479000.0,2619.0
+Springvale Railway Station,1429400.0,3575.0
+Spotswood Railway Station,354600.0,2565.0
+Southern Cross Railway Station,14696050.0,10044.0
+State Library Railway Station,0.0,3433.0
+Stony Point Railway Station,6950.0,0.0
+Sunshine Railway Station,1577600.0,2880.0
+Sunbury Railway Station,691050.0,1820.0
+Somerville Railway Station,8050.0,0.0
+Syndal Railway Station,698100.0,1363.0
+South Yarra Railway Station,3199050.0,4937.0
+Tyabb Railway Station,4050.0,0.0
+Thornbury Railway Station,376150.0,1787.0
+Tecoma Railway Station,47250.0,1428.0
+Tooronga Railway Station,453150.0,1348.0
+Town Hall Railway Station,0.0,7060.0
+Toorak Railway Station,417900.0,2681.0
+Tottenham Railway Station,394350.0,2711.0
+Thomastown Railway Station,595700.0,1811.0
+Upfield Railway Station,264250.0,1470.0
+Upper Ferntree Gully Railway Station,180450.0,1458.0
+Union Railway Station ,593100.0,2273.0
+Upwey Railway Station,97850.0,1428.0
+Victoria Park Railway Station,659700.0,3604.0
+Watsonia Railway Station,315600.0,1719.0
+Williamstown Beach Railway Station,166350.0,1730.0
+Werribee Railway Station,1049600.0,1091.0
+West Footscray Railway Station,512550.0,3574.0
+Watergardens Railway Station,1295450.0,2878.0
+Williamstown Railway Station,149500.0,1730.0
+Windsor Railway Station,586800.0,1975.0
+Williams Landing Railway Station,1389550.0,1091.0
+West Richmond Railway Station,407750.0,3442.0
+Willison Railway Station,73100.0,1537.0
+Westgarth Railway Station,201950.0,1694.0
+Westall Railway Station,634250.0,3674.0
+Westona Railway Station,229400.0,992.0
+Wattle Glen Railway Station,27200.0,921.0
+Yarraman Railway Station,272450.0,3417.0
+Yarraville Railway Station,820600.0,2565.0

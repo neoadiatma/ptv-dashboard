@@ -1,0 +1,40 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 600,
+  "height": 450,
+  "projection": {"type": "mercator"},
+  "layer": [
+    {
+      "data": {
+        "url": "data/lga_melbourne.json",
+        "format": {"type": "topojson", "feature": "SA2_2021_AUST_GDA2020"}
+      },
+      "mark": {"type": "geoshape", "fill": "#f7f7f7", "stroke": "#ddd"}
+    },
+    {
+      "data": {"url": "data/stations.json"},
+      "transform": [{"filter": "datum.entries > 500000"}],
+      "mark": {
+        "type": "circle",
+        "color": "#e31a1c",
+        "opacity": 0.8,
+        "stroke": "white",
+        "strokeWidth": 0.8
+      },
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "size": {
+          "field": "entries",
+          "type": "quantitative",
+          "scale": {"range": [30, 400]},
+          "legend": {"title": "Annual entries"}
+        },
+        "tooltip": [
+          {"field": "stop_name", "title": "Station"},
+          {"field": "entries", "format": ",.0f"}
+        ]
+      }
+    }
+  ]
+}

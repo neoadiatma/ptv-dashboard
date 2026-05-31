@@ -1,0 +1,15 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "data/region_patronage.csv"},
+  "width": 400,
+  "height": 300,
+  "mark": {"type": "bar", "color": "#1f77b4"},
+  "encoding": {
+    "x": {"field": "Region", "type": "nominal", "sort": ["CBD", "Inner", "Outer"], "axis": {"labelAngle": 0}},
+    "y": {"field": "entries", "type": "quantitative", "title": "Total annual entries"},
+    "tooltip": [
+      {"field": "Region"},
+      {"field": "entries", "format": ",.0f"}
+    ]
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 1000,
+  "height": 600,
+  "projection": {
+    "type": "mercator",
+    "center": [145.0, -37.9],
+    "scale": {"signal": "zoomScale"},
+    "translate": {"signal": "[panX, panY]"}
+  },
+  "params": [
+    {
+      "name": "line_sel",
+      "value": "",
+      "bind": {
+        "input": "select",
+        "options": ["", "Alamein", "Belgrave", "Craigieburn", "Cranbourne", "Frankston", "Glen Waverley", "Hurstbridge", "Lilydale", "Mernda", "Pakenham", "Sandringham", "Sunbury", "Upfield", "Werribee", "Williamstown"],
+        "labels": ["All", "Alamein", "Belgrave", "Craigieburn", "Cranbourne", "Frankston", "Glen Waverley", "Hurstbridge", "Lilydale", "Mernda", "Pakenham", "Sandringham", "Sunbury", "Upfield", "Werribee", "Williamstown"],
+        "name": "Filter by line "
+      }
+    },
+    {"name": "zoomScale", "value": 50000},
+    {"name": "panX", "value": 500},
+    {"name": "panY", "value": 300}
+  ],
+  "layer": [
+    {
+      "data": {
+        "url": "data/lga_melbourne.json",
+        "format": {"type": "topojson", "feature": "SA2_2021_AUST_GDA2020"}
+      },
+      "mark": {"type": "geoshape", "fill": "#f0f0f0", "stroke": "#ccc"}
+    },
+    {
+      "data": {
+        "url": "data/train_lines.json",
+        "format": {"type": "json", "property": "features"}
+      },
+      "mark": {"type": "geoshape", "stroke": "#888", "strokeWidth": 1.5, "fill": "none"}
+    },
+    {
+      "data": {"url": "data/stations.json"},
+      "transform": [
+        {
+          "filter": "line_sel == '' || datum.route_short_name == line_sel"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "color": "#e31a1c",
+        "opacity": 0.85,
+        "stroke": "white",
+        "strokeWidth": 0.5
+      },
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "size": {
+          "field": "entries",
+          "type": "quantitative",
+          "scale": {"range": [10, 200]},
+          "legend": {"title": "Annual entries"}
+        },
+        "tooltip": [
+          {"field": "stop_name", "title": "Station"},
+          {"field": "entries", "format": ",.0f"},
+          {"field": "route_short_name", "title": "Line"}
+        ]
+      }
+    }
+  ]
+}

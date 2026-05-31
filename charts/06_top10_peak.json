@@ -1,0 +1,24 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "data/top10_peak.csv"},
+  "width": 450,
+  "height": 350,
+  "mark": {"type": "bar"},
+  "encoding": {
+    "x": {"field": "Passengers", "type": "quantitative", "title": "Passengers", "stack": "normalize"},
+    "y": {"field": "stop_name", "type": "nominal", "sort": "-x", "title": null},
+    "color": {
+      "field": "Peak",
+      "type": "nominal",
+      "scale": {
+        "domain": ["AM_peak", "interpeak", "PM_peak", "PM_late"],
+        "range": ["#1f77b4", "#ff7f0e", "#2ca02c", "#9467bd"]
+      }
+    },
+    "tooltip": [
+      {"field": "stop_name"},
+      {"field": "Peak"},
+      {"field": "Passengers", "format": ",.0f"}
+    ]
+  }
+}

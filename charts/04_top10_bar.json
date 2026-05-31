@@ -1,0 +1,16 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "data/top10_stations.csv"},
+  "width": 400,
+  "height": 300,
+  "mark": "bar",
+  "encoding": {
+    "y": {"field": "stop_name", "type": "nominal", "sort": "-x", "title": null},
+    "x": {"field": "entries", "type": "quantitative", "title": "Annual entries"},
+    "color": {"value": "#d62728"},
+    "tooltip": [
+      {"field": "stop_name"},
+      {"field": "entries", "format": ",.0f"}
+    ]
+  }
+}

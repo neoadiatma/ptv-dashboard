@@ -1,0 +1,25 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "data/services_scatter.csv"},
+  "transform": [
+    {"filter": "datum.entries > 0"}
+  ],
+  "width": 400,
+  "height": 350,
+  "mark": {"type": "circle", "color": "#1f77b4", "opacity": 0.7},
+  "encoding": {
+    "x": {"field": "services_per_day", "type": "quantitative", "title": "Weekday services"},
+    "y": {
+      "field": "entries",
+      "type": "quantitative",
+      "title": "Annual entries",
+      "scale": {"type": "log"}
+    },
+    "size": {"value": 80},
+    "tooltip": [
+      {"field": "stop_name", "title": "Station"},
+      {"field": "services_per_day", "format": ".0f"},
+      {"field": "entries", "format": ",.0f"}
+    ]
+  }
+}

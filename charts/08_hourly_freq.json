@@ -1,0 +1,56 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "data/hourly_frequency.csv"},
+  "width": 500,
+  "height": 300,
+  "params": [
+    {
+      "name": "line_sel",
+      "value": "All",
+      "bind": {
+        "input": "select",
+        "options": ["All", "Alamein", "Belgrave", "Craigieburn", "Cranbourne", "Frankston", "Glen Waverley", "Hurstbridge", "Lilydale", "Mernda", "Pakenham", "Sandringham", "Sunbury", "Upfield", "Werribee", "Williamstown"],
+        "labels": ["All", "Alamein", "Belgrave", "Craigieburn", "Cranbourne", "Frankston", "Glen Waverley", "Hurstbridge", "Lilydale", "Mernda", "Pakenham", "Sandringham", "Sunbury", "Upfield", "Werribee", "Williamstown"],
+        "name": "Select line "
+      }
+    },
+    {
+      "name": "line_highlight",
+      "select": {"type": "point", "fields": ["Line"]},
+      "bind": "legend"
+    }
+  ],
+  "transform": [
+    {
+      "filter": "line_sel == 'All' || datum.Line == line_sel"
+    }
+  ],
+  "mark": "line",
+  "encoding": {
+    "x": {
+      "field": "Hour",
+      "type": "quantitative",
+      "title": "Hour of day",
+      "scale": {"domain": [0, 23]}
+    },
+    "y": {
+      "field": "trips",
+      "type": "quantitative",
+      "title": "Trips per hour"
+    },
+    "color": {
+      "field": "Line",
+      "type": "nominal",
+      "legend": {"title": "Line"}
+    },
+    "opacity": {
+      "condition": {"param": "line_highlight", "value": 1},
+      "value": 0.15
+    },
+    "tooltip": [
+      {"field": "Line"},
+      {"field": "Hour"},
+      {"field": "trips"}
+    ]
+  }
+}
