@@ -16,12 +16,12 @@
     }
     body {
       font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-      max-width: 1800px; /* Slightly wider to accommodate charts comfortably */
-      margin: 0 auto;
+      margin: 0;
       padding: 0;
       color: #2c3e50;
       line-height: 1.6;
       background: #f4f7f9; /* Softer, cooler background */
+      width: 100%
     }
     
     /* PTV Theme Header */
@@ -30,8 +30,18 @@
       color: white;
       text-align: center;
       padding: 3em 1.5em;
-      margin-bottom: 3em;
+      margin: 0 0 3em 0;
       border-bottom: 6px solid #00AEEF; /* PTV Train Cyan */
+    }
+    footer {
+      margin: 4em 0 0 0; /* Ensures 0 margin on left and right */
+      background: #e9eef3;
+      padding: 2em;
+      font-size: 0.9em;
+      color: #4a5c6e;
+      text-align: center;
+      border-top: 2px solid #d1dbe5;
+      width: 100%;
     }
     header h1 {
       font-size: 2.8rem;
@@ -48,6 +58,8 @@
 
     /* Typography & Sections */
     section, .content-wrapper {
+      max-width:1600px;
+      margin: 0 auto;
       padding: 0 2em;
     }
     h2 {
